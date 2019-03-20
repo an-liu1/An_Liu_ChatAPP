@@ -1,0 +1,17 @@
+{
+  "name": "an_liu_chatapp",
+  "version": "1.0.0",
+  "description": "social media app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "An Liu",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.4"
+  },
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}
