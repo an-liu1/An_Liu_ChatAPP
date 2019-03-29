@@ -4,11 +4,17 @@ const socket = io();
 
 function logConnect ({sID, message}){
     console.log(sID, message);
-    vm.socketID = sID;
+    vm.socketID = sID; 
+    document.querySelector('.notification').innerText = sID + ' join in the chat channel';
+    // document.querySelector('.namelist').innerText = sID;
 }
 
 function AppendMessage(message){
     vm.messages.push(message);
+}
+
+function disConnect(data){
+	document.querySelector('.notification').innerText = data + ' left the chat channel';
 }
 
 const vm = new Vue({
@@ -34,5 +40,5 @@ const vm = new Vue({
 
 socket.on('connected', logConnect);
 socket.addEventListener('chat message', AppendMessage);
-socket.addEventListener('disconnect', AppendMessage);
+socket.addEventListener('disconnect', disConnect);
 

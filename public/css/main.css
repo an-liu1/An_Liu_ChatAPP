@@ -1,2 +1,171 @@
-*{margin:0;padding:0;box-sizing:border-box}html,body{height:100%}body{font:16px Helvetica, Arial}main{display:flex;height:100%;flex-direction:row}.form-container,.messages{padding:20px}.form-container{flex:1;border:6px solid #bfcfd6;background-color:#e3edf1}.form-container label{display:block;margin-bottom:0.5rem}.messages{flex:2;background-color:#eee;border:6px solid #e2e0e0}input,textarea{display:block;width:100%;border:2px solid #bfcfd6;border-radius:4px;font-size:0.8rem;padding:0.4rem;border-style:solid}textarea{height:135px}form{padding:3px;margin:12px auto}form input[type=submit]{width:auto;padding:10px;background-color:#4bc811;margin-top:1rem;border-radius:8px;color:white;cursor:pointer;text-transform:uppercase;font-weight:bold}#messages{list-style-type:none;margin:0;padding:0}#messages li{padding:5px 10px}#messages li:nth-child(odd){background:#eee}.new-message{width:45%;padding:8px 12px;background-color:white;border-radius:8px;margin-bottom:1rem;float:left;clear:both}.new-message span{font-size:0.8rem;display:block;margin-bottom:2px}.my-message{float:right !important;background-color:#86bf9d;color:white}
+.new-message {
+  width: 45%;
+  padding: 8px 12px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  float: left;
+  clear: both;
+}
+.new-message span {
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.my-message {
+  float: right !important;
+  background-color: #86bf9d;
+  color: white;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 16px Helvetica, Arial;
+}
+
+main {
+  display: flex;
+  max-width: 800px;
+  height: 60%;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 5%;
+  background-image: url("/images/chat_bcged.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.user {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.user h2 {
+  margin: 10px 0;
+}
+.user ul {
+  list-style-type: none;
+}
+.user li {
+  font-size: 1.2em;
+  padding: 10px;
+}
+.user li span {
+  font-size: 0.8em;
+  color: green;
+}
+
+.id-info {
+  flex: 1;
+  height: 60px;
+}
+.id-info img {
+  width: 90px;
+  height: 100%;
+  float: left;
+}
+.id-info div {
+  display: block;
+  width: 80%;
+  float: left;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.id-info div p {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.chat {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container, .messages {
+  padding: 20px;
+}
+
+.form-container {
+  flex: 2;
+  border: 6px solid #bfcfd6;
+  background-color: #e3edf1;
+}
+.form-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-container .action-icon {
+  margin-bottom: 10px;
+}
+.form-container .action-icon a {
+  padding: 10px;
+}
+
+.messages {
+  flex: 3;
+  background-color: #eee;
+  border: 6px solid #e2e0e0;
+  overflow: scroll;
+}
+.messages .notification {
+  text-align: center;
+  opacity: 0.5;
+  padding: 5px 0;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  border: 2px solid #bfcfd6;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  border-style: solid;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+}
+
+form {
+  padding: 3px;
+  margin: 0 auto;
+}
+form input[type=submit] {
+  width: auto;
+  padding: 10px;
+  background-color: #4bc811;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+  margin-top: 5px;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#messages li {
+  padding: 5px 10px;
+}
+#messages li:nth-child(odd) {
+  background: #eee;
+}
+
 /*# sourceMappingURL=main.css.map */

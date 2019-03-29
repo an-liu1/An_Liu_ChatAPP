@@ -2,28 +2,59 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Socket IO Chat with Node!</title>
+	<title>Socket IO Chat APP!</title>
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="https://unpkg.com/vue"></script> 
 </head>
 <body>
-	<main id="app">		
-		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
+	<main id="app">	
+		<section class="user">
+			<label for="nickname">Your Nickname</label>
 			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
-			
-			<form>
-				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input type="submit" @click.prevent="dispatchMessage">
-			</form>
-		</section>
-		
-		<section class="messages">
-			<ul id="messages" v-for="message in messages">
-				<newmessage :msg="message"></newmessage>
+			<h2>User List</h2>
+			<ul>
+				<li v-model="nickname">{{message.name}} <span>(online)</span></li>
+				<li v-model="nickname">Andy Liu <span>(online)</span></li>
+				<li v-model="nickname">Andy Liu <span>(online)</span></li>
+				<li v-model="nickname">Andy Liu <span>(online)</span></li>
+				<li v-model="nickname">Andy Liu <span>(online)</span></li>
+				<li v-model="nickname">Andy Liu <span>(online)</span></li>
 			</ul>
-		</section>		
+		</section>	
+
+		<section class="chat">
+			<section class="id-info">
+				<img src="/images/icon.png" alt="">
+				<div>
+					<h2>IDP3 - Section B Chat Window</h2> 
+					<p>This is a group chat channel for IDP students to discuss projects.</p>
+				</div>
+			</section>
+	
+			<section class="messages">
+				<p class="notification"></p>
+				<ul id="messages" v-for="message in messages">
+					<newmessage :msg="message"></newmessage>
+				</ul>
+			</section>
+	
+			<section class="form-container">	
+				<form>
+					<div class="action-icon">
+						<a href="#"><i class="fas fa-font"></i></a>
+						<a href="#"><i class="far fa-smile-beam"></i></a>
+						<a href="#"><i class="fas fa-cut"></i></a>
+						<a href="#"><i class="fas fa-microphone"></i></a>
+						<a href="#"><i class="fas fa-image"></i></a>
+						<a href="#"><i class="fas fa-video"></i></a>
+					</div>
+					<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" placeholder="Something to say here"></textarea>
+					<input type="submit" @click.prevent="dispatchMessage">
+				</form>
+			</section>
+		</section>
+				
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
