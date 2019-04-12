@@ -54,6 +54,11 @@ MIT License
 
 ### Future Plan
 
-1. Adding more details about my projects with functions
-2. optimizing structure and functions
-3. more details about myself
+1. Adding more functions to the chat app
+    1) log in/log out
+    2) video & voice call
+    3) file transfer
+    4) search chat history
+    5) voice message
+    6) location
+2. optimizing structure and skin
