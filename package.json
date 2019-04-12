@@ -11,5 +11,14 @@
   "dependencies": {
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/an-liu1/An_Liu_ChatAPP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/an-liu1/An_Liu_ChatAPP/issues"
+  },
+  "homepage": "https://github.com/an-liu1/An_Liu_ChatAPP#readme"
 }

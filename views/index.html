@@ -5,16 +5,15 @@
 	<title>Socket IO Chat APP!</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<script src="https://unpkg.com/vue"></script> 
+	<script src="https://unpkg.com/vue"></script>
 </head>
 <body>
 	<main id="app">	
 		<section class="user">
-			<label for="nickname">Your Nickname</label>
+			<label for="nickname">Your Nickname:</label>
 			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
 			<h2>User List</h2>
 			<ul>
-				<li v-model="nickname">{{message.name}} <span>(online)</span></li>
 				<li v-model="nickname">Andy Liu <span>(online)</span></li>
 				<li v-model="nickname">Andy Liu <span>(online)</span></li>
 				<li v-model="nickname">Andy Liu <span>(online)</span></li>
@@ -33,9 +32,9 @@
 			</section>
 	
 			<section class="messages">
-				<p class="notification"></p>
-				<ul id="messages" v-for="message in messages">
-					<newmessage :msg="message"></newmessage>
+				<!-- <p class="notification"></p> -->
+				<ul id="messages" v-for="message in messages" class="notification">
+					<component :is="message.type" :msg="message"></component>
 				</ul>
 			</section>
 	

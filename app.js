@@ -20,7 +20,14 @@ io.attach(server);
 io.on('connection', function(socket){
     console.log('a user has connect!');
     socket.emit('connected', { sID: `${socket.id}`, message: 'new connection'} );
-    io.emit('connceted', socket.id + ' join in the chat channel');
+    // io.emit('connceted', socket.id + ' join in the chat channel');
+
+    io.emit('note', {
+        id: `${socket.id}`,
+     
+        event: 'usercon'
+    });
+
 
     socket.on('chat message', function(msg){
         console.log('message:', msg, 'socket:', socket.id);
@@ -31,6 +38,11 @@ io.on('connection', function(socket){
 
     socket.on('disconnect', function(){
         console.log('a user has diconnect!');
-        io.emit('disconnect', socket.id + ' left the chat channel');
+        // io.emit('disconnect', socket.id + ' left the chat channel');
+        io.emit('note', {
+            id: `${socket.id}`,
+         
+            event: 'userdc'
+        });
     });
 });
